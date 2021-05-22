@@ -1,6 +1,8 @@
 import React from 'react';
-import {Welcome} from './src/pages/Welcome';
+import { Welcome } from './src/pages/Welcome';
 
-export default function App() {
+const App = () => {
   return <Welcome />;
-}
+};
+
+export default App;

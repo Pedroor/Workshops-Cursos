@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render successfully renders App successfully 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#52665A",
+        "fontSize": 32,
+        "fontWeight": "bold",
+        "marginTop": 38,
+        "textAlign": "center",
+      }
+    }
+  >
+    Gerencia
+    
+
+     suas plantas
+    
+
+     de forma fácil
+  </Text>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/watering.png",
+      }
+    }
+    style={
+      Object {
+        "height": 284,
+        "width": 292,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "#52665A",
+        "fontSize": 18,
+        "paddingHorizontal": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você sempre que precisar
+  </Text>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#32B768",
+        "borderRadius": 16,
+        "height": 56,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "opacity": 1,
+        "width": 56,
+      }
+    }
+  >
+    <Text>
+       
+      &gt;
+       
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
