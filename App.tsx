@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import { Confirmation } from './src/pages/Confirmation';
+import Routes from './src/routes';
 
 const App = () => {
-  useEffect(() => {
-    SplashScreen.hide();
-  });
-  return <Confirmation />;
+  return <Routes />;
 };
 
 export default App;

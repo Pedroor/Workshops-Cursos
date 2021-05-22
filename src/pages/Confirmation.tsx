@@ -17,7 +17,7 @@ export function Confirmation() {
           Agora vamos começar a cuidar de suas plantinhas com muito cuidado.
         </Text>
         <View style={styles.footer}>
-          <Button />
+          <Button title={'Proxímo'} />
         </View>
       </View>
     </SafeAreaView>
