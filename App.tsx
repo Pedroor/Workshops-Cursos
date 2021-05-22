@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import { UserIdentification } from './src/pages/UserIdentification';
+import { Confirmation } from './src/pages/Confirmation';
 
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   });
-  return <UserIdentification />;
+  return <Confirmation />;
 };
 
 export default App;
