@@ -6,25 +6,29 @@ import {
   TouchableOpacity,
   SafeAreaView,
   StyleSheet,
+  Dimensions,
 } from 'react-native';
-
+import Right from 'react-native-vector-icons/Feather';
 import Watering from '../assets/watering.png';
 import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 
 export function Welcome() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>
-        Gerencia{'\n'} suas plantas{'\n'} de forma fácil
-      </Text>
-      <Image style={styles.image} source={Watering} />
-      <Text style={styles.subtitle}>
-        Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você
-        sempre que precisar
-      </Text>
-      <TouchableOpacity style={styles.button} activeOpacity={0.7}>
-        <Text> {'>'} </Text>
-      </TouchableOpacity>
+      <View style={styles.wrapper}>
+        <Text style={styles.title}>
+          Gerencie{'\n'} suas plantas de{'\n'} forma fácil
+        </Text>
+        <Image style={styles.image} source={Watering} resizeMode="contain" />
+        <Text style={styles.subtitle}>
+          Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você
+          sempre que precisar
+        </Text>
+        <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+          <Right name="chevron-right" style={styles.buttonIcon} />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -32,17 +36,24 @@ export function Welcome() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+  },
+  wrapper: {
+    flex: 1,
+    justifyContent: 'space-around',
     alignItems: 'center',
+    paddingHorizontal: 20,
   },
   title: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: 'bold',
+    fontFamily: fonts.heading,
     textAlign: 'center',
     color: colors.heading,
     marginTop: 38,
+    lineHeight: 34,
   },
   subtitle: {
+    fontFamily: fonts.text,
     textAlign: 'center',
     fontSize: 18,
     paddingHorizontal: 20,
@@ -57,8 +68,11 @@ const styles = StyleSheet.create({
     height: 56,
     width: 56,
   },
+  buttonIcon: {
+    color: colors.white,
+    fontSize: 32,
+  },
   image: {
-    width: 292,
-    height: 284,
+    height: Dimensions.get('window').width * 0.7,
   },
 });
