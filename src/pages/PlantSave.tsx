@@ -18,20 +18,14 @@ import waterdrop from '../assets/waterdrop.png';
 import { Button } from '../components/Button';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { format, isBefore } from 'date-fns';
+import {
+  loadPlantOnStorage,
+  PlantProps,
+  savePlantOnStorage,
+} from '../libs/storage';
 
 interface Params {
-  plant: {
-    id: string;
-    name: string;
-    about: string;
-    water_tips: string;
-    photo: string;
-    environments: [string];
-    frequency: {
-      times: number;
-      repeat_every: string;
-    };
-  };
+  plant: PlantProps;
 }
 export function PlantSave() {
   const route = useRoute();
@@ -42,6 +36,19 @@ export function PlantSave() {
   useEffect(() => {
     console.log(selectedDateTime);
   }, [selectedDateTime]);
+
+  async function handleSavePlantOnStorage() {
+    const data = await loadPlantOnStorage();
+
+    try {
+      await savePlantOnStorage({
+        ...plant,
+        dateTimeNotification: selectedDateTime,
+      });
+    } catch (error) {
+      Alert.alert('Não foi possivel salvar! ⏰');
+    }
+  }
 
   function handleChangeTime(event: Event, dateTime: Date | undefined) {
     if (Platform.OS === 'android') {
@@ -90,7 +97,7 @@ export function PlantSave() {
           </TouchableOpacity>
         )}
 
-        <Button title={'Cadastrar planta'} onPress={() => {}} />
+        <Button title={'Cadastrar planta'} onPress={handleSavePlantOnStorage} />
       </View>
     </View>
   );
