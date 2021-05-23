@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { useRoute } from '@react-navigation/core';
+import { useNavigation, useRoute } from '@react-navigation/core';
 import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
 import fonts from '../styles/fonts';
 import colors from '../styles/colors';
@@ -29,6 +29,7 @@ interface Params {
 }
 export function PlantSave() {
   const route = useRoute();
+  const navigation = useNavigation();
   const [selectedDateTime, setSelectedDateTime] = useState(new Date());
   const [showDatePicker, setShowDatePicker] = useState(Platform.OS === 'ios');
   const { plant } = route.params as Params;
@@ -38,12 +39,18 @@ export function PlantSave() {
   }, [selectedDateTime]);
 
   async function handleSavePlantOnStorage() {
-    const data = await loadPlantOnStorage();
-
     try {
       await savePlantOnStorage({
         ...plant,
         dateTimeNotification: selectedDateTime,
+      });
+      navigation.navigate('Confirmation', {
+        title: 'Tudo certo',
+        subtitle:
+          'Fique tranquilo que sempre vamos lembrar você de cuidar da sua plantinha com muito cuidado.',
+        buttonTitle: 'Muito Obrigado',
+        icon: 'hug',
+        nextScreen: 'MyPlant',
       });
     } catch (error) {
       Alert.alert('Não foi possivel salvar! ⏰');
