@@ -27,7 +27,7 @@ export function EnviromentButton({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.shape,
-    width: 76,
+    width: 80,
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',

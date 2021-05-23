@@ -7,6 +7,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { EnviromentButton } from '../components/EnviromentButton';
 import { Header } from '../components/Header';
 import { Load } from '../components/Load';
@@ -33,6 +34,7 @@ interface PlantProps {
 }
 
 export function PlantSelect() {
+  const navigation = useNavigation();
   const [enviroments, setEnviroments] = useState<EnviromentProps[]>([]);
   const [plants, setPlants] = useState<PlantProps[]>([]);
   const [filteredPlants, setFilteredPlants] = useState<PlantProps[]>([]);
@@ -40,7 +42,6 @@ export function PlantSelect() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [loadingMore, setLoadingMore] = useState(false);
-  const [loadedAll, setLoadedAll] = useState(false);
 
   useEffect(() => {
     fetchEnviroment();
@@ -91,6 +92,10 @@ export function PlantSelect() {
     fetchPlants();
   }
 
+  function handlePlantSelect(plant: PlantProps) {
+    navigation.navigate('PlantSave', { plant });
+  }
+
   if (loading) return <Load />;
 
   return (
@@ -105,7 +110,7 @@ export function PlantSelect() {
           data={enviroments}
           horizontal
           showsHorizontalScrollIndicator={false}
-          keyExtractor={item => item.key}
+          keyExtractor={item => String(item.key)}
           contentContainerStyle={styles.environmentList}
           renderItem={({ item }) => (
             <EnviromentButton
@@ -119,8 +124,13 @@ export function PlantSelect() {
       <View style={styles.plants}>
         <FlatList
           data={filteredPlants}
-          keyExtractor={item => item.id}
-          renderItem={({ item }) => <PlantCardPrimary data={item} />}
+          keyExtractor={item => String(item.id)}
+          renderItem={({ item }) => (
+            <PlantCardPrimary
+              data={item}
+              onPress={() => handlePlantSelect(item)}
+            />
+          )}
           showsVerticalScrollIndicator={false}
           numColumns={2}
           contentContainerStyle={styles.plantsList}
