@@ -1,28 +1,48 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
 import { SvgFromUri } from 'react-native-svg';
 import fonts from '../styles/fonts';
 import colors from '../styles/colors';
+import Animated from 'react-native-reanimated';
+import Trash from 'react-native-vector-icons/Feather';
 
 interface PlantProps extends RectButtonProps {
   data: {
     name: string;
     photo: string;
-    hour: Date;
+    hour: string;
   };
+  handleRemove: () => void;
 }
 
-export const PlantCardSecondary = ({ data, ...rest }: PlantProps) => {
+export const PlantCardSecondary = ({
+  data,
+  handleRemove,
+  ...rest
+}: PlantProps) => {
   return (
-    <RectButton style={styles.container} {...rest}>
-      <SvgFromUri uri={data.photo} width={50} height={50} />
-      <Text style={styles.title}>{data.name}</Text>
-      <View style={styles.details}>
-        <Text style={styles.timeLabel}>Regar as</Text>
-        <Text style={styles.time}>{data.hour}</Text>
-      </View>
-    </RectButton>
+    <Swipeable
+      overshootRight={false}
+      renderRightActions={() => (
+        <Animated.View>
+          <View>
+            <RectButton style={styles.remove} onPress={handleRemove}>
+              <Trash name="trash" size={32} color={colors.white} />
+            </RectButton>
+          </View>
+        </Animated.View>
+      )}>
+      <RectButton style={styles.container} {...rest}>
+        <SvgFromUri uri={data.photo} width={50} height={50} />
+        <Text style={styles.title}>{data.name}</Text>
+        <View style={styles.details}>
+          <Text style={styles.timeLabel}>Regar as</Text>
+          <Text style={styles.time}>{data.hour}</Text>
+        </View>
+      </RectButton>
+    </Swipeable>
   );
 };
 
@@ -57,5 +77,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: fonts.heading,
     color: colors.body_dark,
+  },
+  remove: {
+    width: 110,
+    height: 95,
+    marginTop: 8,
+    backgroundColor: colors.red,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    right: 20,
   },
 });

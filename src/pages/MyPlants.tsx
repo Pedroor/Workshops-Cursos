@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, Image, FlatList } from 'react-native';
+import { StyleSheet, View, Text, Image, FlatList, Alert } from 'react-native';
 import { Header } from '../components/Header';
 import colors from '../styles/colors';
 import waterdrop from '../assets/waterdrop.png';
-import { loadPlantOnStorage, PlantProps } from '../libs/storage';
+import {
+  loadPlantOnStorage,
+  PlantProps,
+  removePlantOnStorage,
+} from '../libs/storage';
 import { formatDistance } from 'date-fns/esm';
 import pt from 'date-fns/esm/locale/pt/index.js';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
+import { Load } from '../components/Load';
 
 export function MyPlants() {
   const [myPlants, setMyPlants] = useState<PlantProps[]>([]);
@@ -32,6 +37,30 @@ export function MyPlants() {
     loadStorageData();
   }, []);
 
+  function handleRemove(plant: PlantProps) {
+    Alert.alert('Remover', `Deseja remover a ${plant.name}?`, [
+      {
+        text: 'Não 🙏',
+        style: 'cancel',
+      },
+      {
+        text: 'Sim 😥',
+        onPress: async () => {
+          try {
+            await removePlantOnStorage(plant.id);
+            setMyPlants(oldData =>
+              oldData.filter(item => item.id !== plant.id),
+            );
+            console.log(myPlants.map(plat => console.log(plat.name)));
+          } catch (error) {
+            Alert.alert('Não foi possível remover 😎');
+          }
+        },
+      },
+    ]);
+  }
+
+  if (loading) return <Load />;
   return (
     <View style={styles.container}>
       <Header />
@@ -44,7 +73,14 @@ export function MyPlants() {
         <FlatList
           data={myPlants}
           keyExtractor={item => String(item.id)}
-          renderItem={({ item }) => <PlantCardSecondary data={item} />}
+          renderItem={({ item }) => (
+            <PlantCardSecondary
+              data={item}
+              handleRemove={() => {
+                handleRemove(item);
+              }}
+            />
+          )}
           showsVerticalScrollIndicator={false}
         />
       </View>
