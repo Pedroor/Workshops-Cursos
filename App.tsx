@@ -6,6 +6,7 @@ import Routes from './src/routes';
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import PushNotification from 'react-native-push-notification';
 import OneSignal, { DeviceState } from 'react-native-onesignal';
+import { Notifications } from 'react-native-notifications';
 
 // 4ea21522-a236-431d-acdf-81fe64e6059e
 
@@ -65,6 +66,19 @@ const App = () => {
   const [isSubscribed, setIsSubscribed] = useState<DeviceState>();
 
   useEffect(() => {
+    PushNotification.createChannel(
+      {
+        channelId: '13789', // (required)
+        channelName: 'My channel', // (required)
+        channelDescription: 'A channel to categorise your notifications', // (optional) default: undefined.
+        playSound: false, // (optional) default: true
+        soundName: 'default', // (optional) See `soundName` parameter of `localNotification` function
+        importance: 4, // (optional) default: 4. Int value of the Android notification importance
+        vibrate: true, // (optional) default: true. Creates the default vibration patten if true.
+      },
+      created => console.log(`createChannel returned '${created}'`), // (optional) callback returns whether the channel was created, false means it already existed.
+    );
+    Notifications.registerRemoteNotifications();
     async function configOneSignal() {
       /* O N E S I G N A L   S E T U P */
 
