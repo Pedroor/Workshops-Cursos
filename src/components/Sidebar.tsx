@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Stack, Text, Link, Icon } from "@chakra-ui/react";
 import {
   RiContactsLine,
