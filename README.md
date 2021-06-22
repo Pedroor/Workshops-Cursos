@@ -115,3 +115,7 @@ Feito com ❤️ por Pedro Arthur 👋🏻 [Get in touch!](https://github.com/Pe
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Fekleite/plantmanager?color=32B768">
   </a>
   
+    <a href="https://github.com/Fekleite/plantmanager/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Fekleite/plantmanager?color=32B768">
+  </a>
+  
