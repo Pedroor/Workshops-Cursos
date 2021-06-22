@@ -55,33 +55,20 @@ Repositório que contém o codigo fonte de Workshops/Cursos no qual realizei dur
   
 ##  :hammer: Tecnologias
 - [Expo](https://expo.io/)
-- [GraphQL](https://graphql.org/)
-- [ApolloClient](https://www.apollographql.com/docs/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Styled Components](https://styled-components.com/)
-
-<h1 align="center">
- <img alt="Home" src="https://i.imgur.com/TcBdv0N.png" width="400" />
- <img alt="Home" src="https://i.imgur.com/oUupQrS.png" width="400" />
-
-</h1>
-
-<h1 align="center">
-  <img alt="Marvel" src="https://wallpaperaccess.com/full/342092.jpg" width="250px" />
-</h1>
-
-##  :hammer: Tecnologias
-- [Expo](https://expo.io/)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
-- [React Query](https://react-query.tanstack.com/)
 
-<h1 align="center">
- <img alt="Home" src="https://media.tenor.com/images/b705d5681438f3ef56611f87fa707704/tenor.gif" width="400" />
 
-</h1>
-
+ <p align="center">
+	
+<img alt="Mobile" src="https://github.com/Daniel-Vinicius/Happy/blob/main/.github/1%20(1).png" height="300px"/>								       
+<img alt="Mobile" src="https://github.com/Daniel-Vinicius/Happy/blob/main/.github/1%20(2).png" height="300px" width="140px"/>
+<img alt="Mobile" src="https://github.com/Daniel-Vinicius/Happy/blob/main/.github/1%20(3).png" height="300px" width="140px"/>
+<img alt="Mobile" src="https://github.com/Daniel-Vinicius/Happy/blob/main/.github/1%20(4).png" height="300px" width="140px"/>
+<img alt="Mobile" src="https://github.com/Daniel-Vinicius/Happy/blob/main/.github/1%20(5).png" height="300px" width="140px"/>
+																     
+</p>
 
 
 ## :books: Requisitos
