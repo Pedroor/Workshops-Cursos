@@ -13,7 +13,7 @@
 
 ## :page_with_curl: Sobre
 
-Este repositório contém os desafios técnicos que tive que desenvolver ao longo de alguns processos seletivos que participei durante minha jornada como desenvolvedor, cada pasta neste repositório é referente a um desafio específico onde há uma explicação do projeto, tecnologias utilizadas é como executar localmente.
+Repositório que contém o codigo fonte de Workshops/Cursos no qual realizei durante minha carreira como Dev Front-End / Mobile
 
 <h1 align="center">
   <img alt="Marvel" src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png" width="250px" />
@@ -110,4 +110,8 @@ Feito com ❤️ por Pedro Arthur 👋🏻 [Get in touch!](https://github.com/Pe
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Fekleite/plantmanager?color=32B768">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Fekleite/plantmanager?color=32B768">
+  
+   <a href="https://github.com/Fekleite/plantmanager/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Fekleite/plantmanager?color=32B768">
+  </a>
   
