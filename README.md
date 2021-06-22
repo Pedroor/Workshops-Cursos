@@ -49,9 +49,11 @@ Repositório que contém o codigo fonte de Workshops/Cursos no qual realizei dur
   <img src="https://user-images.githubusercontent.com/48728541/115481500-1bddae00-a223-11eb-9914-2484983f38b4.png" />
 </p>
   
-  <h1 align="center">
-  <img alt="Wheater" src="https://media.giphy.com/media/TVpeXDi8xTlyo/giphy.gif" width="250px" />
-</h1>
+<p align="center">
+      <img id="imagem" title="#Projeto" src="https://github.com/Daniel-Vinicius/Happy/blob/main/.github/Imagem.png" width="10%" alt="Happy Logo"/>
+</p>
+
+<h1 align="center">Next Level Week, terceira edição, projeto "Happy". 🥳</h1>
   
 ##  :hammer: Tecnologias
 - [Expo](https://expo.io/)
