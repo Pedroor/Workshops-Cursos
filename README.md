@@ -98,7 +98,7 @@ Repositório que contém o codigo fonte de Workshops/Cursos no qual realizei dur
 Feito com ❤️ por Pedro Arthur 👋🏻 [Get in touch!](https://github.com/Pedroor)
 
  
- <h1 align="center">Plant Manager 🌿</h1>
+﻿<h1 align="center">Plant Manager 🌿</h1>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -111,11 +111,15 @@ Feito com ❤️ por Pedro Arthur 👋🏻 [Get in touch!](https://github.com/Pe
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Fekleite/plantmanager?color=32B768">
   
-   <a href="https://github.com/Fekleite/plantmanager/commits/master">
+  <a href="https://github.com/Fekleite/plantmanager/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Fekleite/plantmanager?color=32B768">
   </a>
-  
-    <a href="https://github.com/Fekleite/plantmanager/issues">
+
+  <a href="https://github.com/Fekleite/plantmanager/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/Fekleite/plantmanager?color=32B768">
   </a>
-  
+</p>
+
+<p align="center"  >
+  <img src="https://user-images.githubusercontent.com/48728541/115481500-1bddae00-a223-11eb-9914-2484983f38b4.png" />
+</p>
