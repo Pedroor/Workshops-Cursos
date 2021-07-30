@@ -80,4 +80,4 @@ Repositório que contém o codigo fonte de Workshops/Cursos no qual realizei dur
 - Um dispositivo ou emulador iOS ou Android
 
 
-Feito com ❤️ por Pedro Arthur 👋🏻 [Get in touch!](https://github.com/Pedroor)
+Feito com ❤️ por Pedro Arthur 👋🏻 [Get in touch!](https://github.com/Pedroor).
