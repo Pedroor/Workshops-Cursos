@@ -1,7 +1,7 @@
 ﻿<h1 align="center">
   <img alt="Wheater" src="https://media.giphy.com/media/AeHLxU7TZXCPS/giphy.gif" width="400px" />
 </h1>
-
+.
 <p align="center">
   <a href="#page_with_curl-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#hammer">Projetos</a>
